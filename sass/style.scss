@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$fontLObster: 'Lobster', cursive;
+$fontAllura: 'Allura', cursive;
+$colorTitle: rgb(14, 180, 147);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+#jumbotron {
+  background-image: url("../images/background-image.jpg");
+  height: 850px;
+header {
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+
+  nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      font-family: $fontLObster;
+      color: $colorTitle;
+      font-size: 38px;
+      text-decoration: none;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      height: 70px;
+      li {
+        padding: 22px 15px;
+        border-top: transparent solid 2px;
+        &:hover {
+          border-top: $colorTitle solid 2px;
+        }
+        a {
+          font-family: $fontLObster;
+          color: rgb(137, 140, 141);
+          font-size: 20px;
+          text-decoration: none;
+
+        }
+      }
+      .fas {
+        font-size: 20px;
+        color: rgb(137, 140, 141);
+        margin-right: 3px;
+      }
+      .far {
+        font-size: 20px;
+        color: rgb(137, 140, 141);
+        margin-right: 3px;
+      }
+
+    }
+  }
+}
+  .hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    img {
+      object-fit: contain;
+    }
+    h1 {
+      text-align: center;
+      color: rgb(159, 162, 163);
+      font-family: $fontLObster;
+      font-size: 50px;
+
+      span{
+        color: $colorTitle;
+        font-size: 72px;
+
+      }
+
+
+    }
+    h2 {
+      text-align: center;
+      font-family: $fontAllura;
+      font-size: 45px;
+      color: rgba(137, 140, 141, 0.902);
+
+
+    }
+  }
+  .social-media {
+    text-align: center;
+    margin-top: 12%;
+      .fab {
+        width: 42px;
+        height: 42px;
+        margin: 0 3px;
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+
+      }
+      .fa-facebook-f {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+      }
+      .fa-instagram {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+      }
+      .fa-youtube {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+      }
+      .fa-google-plus-g {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+
+      }
+
+  }
+}
+
+
+#services {
+  .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 58px 0;
+    font-family: $fontLObster;
+    color: $colorTitle;
+
+  }
+  .services {
+    display: flex;
+    justify-content: space-between;
+    figure {
+      width: 33.3334%;
+      padding: 0 33px;
+      text-align: center;
+      transition: 0.4s;
+      cursor: pointer;
+      &:hover {
+          transform: scale(1.1);
+        }
+      img {
+        padding-bottom: 58px;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 25px;
+      text-align: left;
+      color: $colorTitle;
+      font-family: "Arial";
+
+    }
+    p {
+      font-size: 13px;
+      text-align: justify;
+      font-family: "OpenSans";
+
+    }
+  }
+
+}
+.gray-line:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid rgb(129, 129, 129);
+  width: 830px;
+  margin: 42px auto;
+
+}
+
+#work {
+  .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 58px 0;
+    font-family: $fontLObster;
+    color: $colorTitle;
+  }
+  .text {
+    color: rgba(6, 32, 51, 0.8);
+    text-align: justify;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    width: 966px;
+    margin: 0 auto 70px auto;
+
+  }
+
+    .myprojects {
+      display: flex;
+      justify-content: space-around;
+      figure {
+        text-align: center;
+        .image {
+          position: relative;
+          img {
+            vertical-align: middle;
+          }
+          .hover-eye {
+            position: absolute;
+            top: 42%;
+            left: 40%;
+            opacity: 0;
+            z-index: 2;
+            .fas {
+              border: 1px solid rgb(255, 255, 255);
+              border-radius: 50%;
+              padding: 10px;
+              color: rgb(255, 255, 255);
+              margin-bottom: 10px;
+
+            }
+            p {
+                font-size: 18px;
+                font-family: "Myriad";
+                color: rgb(255, 255, 255);
+            }
+          }
+
+        }
+        figcaption {
+          width: 302px;
+          margin: 0 auto;
+          text-align: justify;
+          background-color: #e9e9e9;
+          padding: 15px 39px 10px 10px;
+
+              h3 {
+                font-size: 20px;
+                font-weight: bold;
+                padding-bottom: 15px;
+                text-align: left;
+                color: $colorTitle;
+                font-family: "Miriam";
+
+              }
+              p {
+                font-size: 13px;
+                text-align: justify;
+                font-family: "OpenSans";
+                color: rgb(129, 129, 129);
+
+              }
+              .stars {
+                .fas {
+                    font-size: 24px;
+                    color: #eec319;
+                }
+                .far {
+                    font-size: 24px;
+                    color: #eec319;
+                }
+              }        
+  }
+        &:hover .hover-eye{
+          opacity: 1;
+          z-index: 100;
+        }
+      }
+    }
+  }
+  figure:hover .image::after {
+            content: "";
+            background-color: $colorTitle;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transition: 0.5s ease-in;
+            position: absolute;
+            z-index: 1;
+        }
+#products {
+  .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 58px 0;
+    font-family: $fontLObster;
+    color: $colorTitle;
+  }
+  .myproducts {
+    display: flex;
+    justify-content: space-around;
+    figure {
+      text-align: center;
+      img {
+        vertical-align: middle;
+      }
+      figcaption {
+        width: 302px;
+        margin: 0 auto;
+        background-color: #e9e9e9;
+        padding: 15px 39px 10px 10px;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 15px;
+      text-align: left;
+      color: $colorTitle;
+      font-family: "Miriam";
+
+    }
+    p {
+      font-size: 13px;
+      text-align: justify;
+      font-family: "OpenSans";
+      color: rgb(129, 129, 129);
+
+    }
+  }
+}
+.gray-line-work:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  width: 228px;
+  margin: 15px 0 6px 0;
+
+}
+
+.gray-line-product:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  width: 228px;
+  margin: 3px 0 35px 0;
+
+}
+
+#services {
+  .about-me {
+    display: flex;
+    justify-content: space-around;
+    p {
+      font-size: 24px;
+      font-family: "Miriam";
+      text-align: center;
+      color: rgba(6, 32, 51, 0.8);
+      width: 792px;
+      margin-top: 50px;
+
+    }
+  }
+}
+
+#contact {
+  border-bottom: 5px solid rgb(6, 32, 51);
+
+  .title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 58px 0;
+    font-family: $fontLObster;
+    color: $colorTitle;
+  }
+  p {
+    font-size: 24px;
+    font-family: "Arial";
+    color: rgba(6, 32, 51, 0.8);
+    text-align: center;
+    width: 956px;
+    margin: 0 auto;
+  }
+  .contact-form {
+    display: flex;
+    margin-top: 57px;
+
+    .social-media-contact {
+      ul {
+        list-style-type: none;
+            li {
+          margin-top: 5px;
+          font-size: 15px;
+          font-family: "OpenSans";
+          color: rgb(106, 115, 123);
+        .fab {
+        width: 42px;
+        height: 42px;
+        transition: 0.1s;
+             &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+        }
+      .fa-facebook-f {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+        padding-left: 14px;
+        margin-right: 8px;
+
+      }
+      .fa-instagram {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+        padding-left: 10px;
+        margin-right: 8px;
+
+
+      }
+      .fa-youtube {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+        padding-left: 6px;
+        margin-right: 8px;
+
+      }
+      .fa-google-plus-g {
+        background-color: rgb(0, 0, 0);
+        opacity: 0.302;
+        color: white;
+        align-items: center;
+        font-size: 26px;
+        padding-top: 8px;
+        padding-left: 5px;
+        margin-right: 8px;
+
+
+      }
+    
+    }
+    }
+    }
+    form {
+      margin-left: 30px;
+      width: 64%;
+      .witaj {
+        color: $colorTitle;
+        font-family: $fontLObster;
+        margin-bottom: 25px;
+        font-size: 24px;
+
+      }
+      .form-name {
+        display: flex;
+        input {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          width: 364px;
+          border-width: 3px;
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+      .form-textarea {
+        margin-top: 26px;
+        textarea {
+        width: 748px;
+        height: 137px;
+        margin-bottom: 15px;
+      }
+     
+      }
+       .form-submit {
+        :first-child {
+          margin-left: 600px;
+          vertical-align: middle;
+         
+
+        }
+        .fa-envelope {
+          color: $colorTitle;
+          margin-right: 5px;
+        }
+        input {
+          background-color: transparent;
+          border: none;
+          font-size: 14px;
+          font-family: "Miriam";
+          margin-bottom: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer {
+    background-color: rgb(177, 180, 179);
+
+  .footer-elements {
+    display: flex;
+    justify-content: space-between;
+    padding: 105px 0 170px 0;
+    .about-company {
+      max-width: 224px;
+      h2 {
+          font-size: 28px;
+          font-family: $fontLObster;
+          color: white;
+      }
+      p {
+          font-size: 13px;
+          font-family: "OpenSans";
+          color: rgb(255, 255, 255);
+          padding-top: 20px;
+
+      }
+    }
+    .search {
+      h2{
+      font-size: 14px;
+      font-family: "Myriad";
+      color: rgba(255, 255, 255, 0.8);
+      padding-bottom: 40px;
+    }
+      input {
+        background-color: transparent;
+        border: 1px solid white;
+        width: 271px;
+        height: 46px;
+        border-radius: 3px;
+      }
+    }
+    .create {
+      ul {
+        list-style-type: none;
+        :first-child {
+          padding-bottom: 20px;
+        }
+        li { 
+          font-size: 13px;
+          font-family: "OpenSans";
+          color: #062033;
+            span {
+              color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
