@@ -52,6 +52,7 @@
 #jumbotron header nav .menu li {
   padding: 22px 15px;
   border-top: transparent solid 2px;
+  transition: 0.3s;
 }
 
 #jumbotron header nav .menu li:hover {
@@ -168,7 +169,7 @@
   padding-top: 8px;
 }
 
-#services .title {
+#blog .title {
   text-align: center;
   font-size: 48px;
   font-weight: 300;
@@ -177,14 +178,14 @@
   color: #0eb493;
 }
 
-#services .services {
+#blog .services {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
 
-#services .services figure {
+#blog .services figure {
   width: 33.3334%;
   padding: 0 33px;
   text-align: center;
@@ -192,15 +193,15 @@
   cursor: pointer;
 }
 
-#services .services figure:hover {
+#blog .services figure:hover {
   transform: scale(1.1);
 }
 
-#services .services figure img {
+#blog .services figure img {
   padding-bottom: 58px;
 }
 
-#services .services h3 {
+#blog .services h3 {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 25px;
@@ -209,7 +210,7 @@
   font-family: "Arial";
 }
 
-#services .services p {
+#blog .services p {
   font-size: 13px;
   text-align: justify;
   font-family: "OpenSans";
@@ -319,6 +320,8 @@
 #work .myprojects figure:hover .hover-eye {
   opacity: 1;
   z-index: 100;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 figure:hover .image::after {
@@ -329,7 +332,7 @@ figure:hover .image::after {
   height: 100%;
   left: 0;
   top: 0;
-  transition: 0.5s ease-in;
+  transition: 0.8s ease-in;
   position: absolute;
   z-index: 1;
 }
@@ -395,6 +398,15 @@ figure:hover .image::after {
   border-bottom: 1px solid #a7a7a7;
   width: 228px;
   margin: 3px 0 35px 0;
+}
+
+#services .title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 300;
+  padding: 58px 0;
+  font-family: "Lobster", cursive;
+  color: #0eb493;
 }
 
 #services .about-me {
