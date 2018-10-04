@@ -16,7 +16,7 @@ $colorTitle: rgb(14, 180, 147);
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
 }
@@ -40,6 +40,7 @@ $colorTitle: rgb(14, 180, 147);
                 color: $colorTitle;
                 font-size: 38px;
                 text-decoration: none;
+                font-weight: bold;
             }
 
             .menu {
@@ -180,7 +181,7 @@ $colorTitle: rgb(14, 180, 147);
         text-align: center;
         font-size: 48px;
         font-weight: 300;
-        padding: 58px 0;
+        padding: 45px 0;
         font-family: $fontLObster;
         color: $colorTitle;
 
@@ -191,36 +192,36 @@ $colorTitle: rgb(14, 180, 147);
         justify-content: space-between;
 
         figure {
-            width: 33.3334%;
-            padding: 0 33px;
             text-align: center;
             transition: 0.4s;
             cursor: pointer;
-
-            &:hover {
-                transform: scale(1.1);
-            }
 
             img {
                 padding-bottom: 58px;
             }
         }
 
-        h3 {
-            font-size: 20px;
-            font-weight: bold;
-            padding-bottom: 25px;
-            text-align: left;
-            color: $colorTitle;
-            font-family: "Arial";
-
-        }
-
-        p {
-            font-size: 13px;
+        figcaption {
+            width: 302px;
+            margin: 0 auto;
             text-align: justify;
-            font-family: "OpenSans";
 
+            h3 {
+                font-size: 20px;
+                font-weight: bold;
+                padding-bottom: 25px;
+                text-align: left;
+                color: $colorTitle;
+                font-family: "Arial";
+
+            }
+
+            p {
+                font-size: 13px;
+                text-align: justify;
+                font-family: "OpenSans";
+
+            }
         }
     }
 
@@ -231,7 +232,7 @@ $colorTitle: rgb(14, 180, 147);
     display: block;
     border-bottom: 1px solid rgb(129, 129, 129);
     width: 830px;
-    margin: 42px auto;
+    margin: 42px auto 0 auto;
 
 }
 
@@ -240,7 +241,7 @@ $colorTitle: rgb(14, 180, 147);
         text-align: center;
         font-size: 48px;
         font-weight: 300;
-        padding: 58px 0;
+        padding: 45px 0;
         font-family: $fontLObster;
         color: $colorTitle;
     }
@@ -250,14 +251,13 @@ $colorTitle: rgb(14, 180, 147);
         text-align: justify;
         font-size: 16px;
         font-family: 'Roboto', sans-serif;
-        width: 966px;
         margin: 0 auto 70px auto;
 
     }
 
     .myprojects {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         figure {
             text-align: center;
@@ -360,14 +360,14 @@ figure:hover .image::after {
         text-align: center;
         font-size: 48px;
         font-weight: 300;
-        padding: 58px 0;
+        padding: 45px 0;
         font-family: $fontLObster;
         color: $colorTitle;
     }
 
     .myproducts {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         figure {
             text-align: center;
@@ -427,19 +427,19 @@ figure:hover .image::after {
         text-align: center;
         font-size: 48px;
         font-weight: 300;
-        padding: 58px 0;
+        padding: 45px 0;
         font-family: $fontLObster;
         color: $colorTitle;
     }
 
     .about-me {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         p {
             font-size: 24px;
             font-family: "Miriam";
-            text-align: center;
+            text-align: justify;
             color: rgba(6, 32, 51, 0.8);
             width: 792px;
             margin-top: 50px;
@@ -465,215 +465,58 @@ figure:hover .image::after {
         font-family: "Arial";
         color: rgba(6, 32, 51, 0.8);
         text-align: center;
-        width: 956px;
         margin: 0 auto;
     }
 
-    .contact-form {
-        display: flex;
-        margin-top: 57px;
+    form {
 
-        .social-media-contact {
-            ul {
-                list-style-type: none;
+        width: 50%;
+        margin: 20px auto 0 auto;
 
-                li {
-                    margin-top: 5px;
-                    font-size: 15px;
-                    font-family: "OpenSans";
-                    color: rgb(106, 115, 123);
-
-                    .fab {
-                        width: 42px;
-                        height: 42px;
-                        transition: 0.1s;
-
-                        &:hover {
-                            transform: scale(1.1);
-                            cursor: pointer;
-                        }
-                    }
-
-                    .fa-facebook-f {
-                        background-color: rgb(0, 0, 0);
-                        opacity: 0.302;
-                        color: white;
-                        align-items: center;
-                        font-size: 26px;
-                        padding-top: 8px;
-                        padding-left: 14px;
-                        margin-right: 8px;
-
-                    }
-
-                    .fa-instagram {
-                        background-color: rgb(0, 0, 0);
-                        opacity: 0.302;
-                        color: white;
-                        align-items: center;
-                        font-size: 26px;
-                        padding-top: 8px;
-                        padding-left: 10px;
-                        margin-right: 8px;
-
-
-                    }
-
-                    .fa-youtube {
-                        background-color: rgb(0, 0, 0);
-                        opacity: 0.302;
-                        color: white;
-                        align-items: center;
-                        font-size: 26px;
-                        padding-top: 8px;
-                        padding-left: 6px;
-                        margin-right: 8px;
-
-                    }
-
-                    .fa-google-plus-g {
-                        background-color: rgb(0, 0, 0);
-                        opacity: 0.302;
-                        color: white;
-                        align-items: center;
-                        font-size: 26px;
-                        padding-top: 8px;
-                        padding-left: 5px;
-                        margin-right: 8px;
-
-
-                    }
-
-                }
-            }
-        }
-
-        form {
-            margin-left: 30px;
-            width: 64%;
-
-            .witaj {
-                color: $colorTitle;
-                font-family: $fontLObster;
-                margin-bottom: 25px;
-                font-size: 24px;
-
-            }
+        .contact-form {
+            width: 100%;
 
             .form-name {
                 display: flex;
 
-                input {
-                    border-top: none;
-                    border-left: none;
-                    border-right: none;
-                    width: 364px;
-                    border-width: 3px;
-
-                    &:first-child {
-                        margin-right: 20px;
-                    }
+                :nth-child(2) {
+                    margin-right: 0;
                 }
+
+                input {
+                    border: $colorTitle solid 1px;
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 100%;
+                    margin: 0 20px 10px 0;
+                }
+
             }
 
             .form-textarea {
-                margin-top: 26px;
-
                 textarea {
-                    width: 748px;
-                    height: 137px;
-                    margin-bottom: 15px;
+                    width: 100%;
+                    border: $colorTitle solid 1px;
+                    border-radius: 5px;
+                    padding: 5px;
                 }
-
             }
 
             .form-submit {
-                :first-child {
-                    margin-left: 600px;
-                    vertical-align: middle;
-
-
-                }
-
-                .fa-envelope {
-                    color: $colorTitle;
-                    margin-right: 5px;
-                }
+                display: flex;
+                justify-content: flex-end;
 
                 input {
-                    background-color: transparent;
-                    border: none;
-                    font-size: 14px;
-                    font-family: "Miriam";
-                    margin-bottom: 40px;
+                    color: $colorTitle;
+                    border-radius: 5px;
+                    border: transparent;
+                    padding: 5px 10px;
                     cursor: pointer;
+                    margin-bottom: 40px;
                 }
             }
+
         }
     }
-}
 
-footer {
-    background-color: rgb(177, 180, 179);
-
-    .footer-elements {
-        display: flex;
-        justify-content: space-between;
-        padding: 105px 0 170px 0;
-
-        .about-company {
-            max-width: 224px;
-
-            h2 {
-                font-size: 28px;
-                font-family: $fontLObster;
-                color: white;
-            }
-
-            p {
-                font-size: 13px;
-                font-family: "OpenSans";
-                color: rgb(255, 255, 255);
-                padding-top: 20px;
-
-            }
-        }
-
-        .search {
-            h2 {
-                font-size: 14px;
-                font-family: "Myriad";
-                color: rgba(255, 255, 255, 0.8);
-                padding-bottom: 40px;
-            }
-
-            input {
-                background-color: transparent;
-                border: 1px solid white;
-                width: 271px;
-                height: 46px;
-                border-radius: 3px;
-            }
-        }
-
-        .create {
-            ul {
-                list-style-type: none;
-
-                :first-child {
-                    padding-bottom: 20px;
-                }
-
-                li {
-                    font-size: 13px;
-                    font-family: "OpenSans";
-                    color: #062033;
-
-                    span {
-                        color: white;
-                    }
-                }
-            }
-        }
-    }
 }

@@ -8,7 +8,7 @@
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
 }
@@ -38,6 +38,7 @@
   color: #0eb493;
   font-size: 38px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 #jumbotron header nav .menu {
@@ -173,7 +174,7 @@
   text-align: center;
   font-size: 48px;
   font-weight: 300;
-  padding: 58px 0;
+  padding: 45px 0;
   font-family: "Lobster", cursive;
   color: #0eb493;
 }
@@ -186,22 +187,22 @@
 }
 
 #blog .services figure {
-  width: 33.3334%;
-  padding: 0 33px;
   text-align: center;
   transition: 0.4s;
   cursor: pointer;
-}
-
-#blog .services figure:hover {
-  transform: scale(1.1);
 }
 
 #blog .services figure img {
   padding-bottom: 58px;
 }
 
-#blog .services h3 {
+#blog .services figcaption {
+  width: 302px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+#blog .services figcaption h3 {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 25px;
@@ -210,7 +211,7 @@
   font-family: "Arial";
 }
 
-#blog .services p {
+#blog .services figcaption p {
   font-size: 13px;
   text-align: justify;
   font-family: "OpenSans";
@@ -221,14 +222,14 @@
   display: block;
   border-bottom: 1px solid #818181;
   width: 830px;
-  margin: 42px auto;
+  margin: 42px auto 0 auto;
 }
 
 #work .title {
   text-align: center;
   font-size: 48px;
   font-weight: 300;
-  padding: 58px 0;
+  padding: 45px 0;
   font-family: "Lobster", cursive;
   color: #0eb493;
 }
@@ -238,15 +239,14 @@
   text-align: justify;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  width: 966px;
   margin: 0 auto 70px auto;
 }
 
 #work .myprojects {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 #work .myprojects figure {
@@ -341,7 +341,7 @@ figure:hover .image::after {
   text-align: center;
   font-size: 48px;
   font-weight: 300;
-  padding: 58px 0;
+  padding: 45px 0;
   font-family: "Lobster", cursive;
   color: #0eb493;
 }
@@ -349,8 +349,8 @@ figure:hover .image::after {
 #products .myproducts {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 #products .myproducts figure {
@@ -404,7 +404,7 @@ figure:hover .image::after {
   text-align: center;
   font-size: 48px;
   font-weight: 300;
-  padding: 58px 0;
+  padding: 45px 0;
   font-family: "Lobster", cursive;
   color: #0eb493;
 }
@@ -412,14 +412,14 @@ figure:hover .image::after {
 #services .about-me {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 #services .about-me p {
   font-size: 24px;
   font-family: "Miriam";
-  text-align: center;
+  text-align: justify;
   color: rgba(6, 32, 51, 0.8);
   width: 792px;
   margin-top: 50px;
@@ -443,203 +443,55 @@ figure:hover .image::after {
   font-family: "Arial";
   color: rgba(6, 32, 51, 0.8);
   text-align: center;
-  width: 956px;
   margin: 0 auto;
 }
 
-#contact .contact-form {
+#contact form {
+  width: 50%;
+  margin: 20px auto 0 auto;
+}
+
+#contact form .contact-form {
+  width: 100%;
+}
+
+#contact form .contact-form .form-name {
   display: -ms-flexbox;
   display: flex;
-  margin-top: 57px;
 }
 
-#contact .contact-form .social-media-contact ul {
-  list-style-type: none;
+#contact form .contact-form .form-name :nth-child(2) {
+  margin-right: 0;
 }
 
-#contact .contact-form .social-media-contact ul li {
-  margin-top: 5px;
-  font-size: 15px;
-  font-family: "OpenSans";
-  color: #6a737b;
+#contact form .contact-form .form-name input {
+  border: #0eb493 solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  margin: 0 20px 10px 0;
 }
 
-#contact .contact-form .social-media-contact ul li .fab {
-  width: 42px;
-  height: 42px;
-  transition: 0.1s;
+#contact form .contact-form .form-textarea textarea {
+  width: 100%;
+  border: #0eb493 solid 1px;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-#contact .contact-form .social-media-contact ul li .fab:hover {
-  transform: scale(1.1);
+#contact form .contact-form .form-submit {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+#contact form .contact-form .form-submit input {
+  color: #0eb493;
+  border-radius: 5px;
+  border: transparent;
+  padding: 5px 10px;
   cursor: pointer;
-}
-
-#contact .contact-form .social-media-contact ul li .fa-facebook-f {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  font-size: 26px;
-  padding-top: 8px;
-  padding-left: 14px;
-  margin-right: 8px;
-}
-
-#contact .contact-form .social-media-contact ul li .fa-instagram {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  font-size: 26px;
-  padding-top: 8px;
-  padding-left: 10px;
-  margin-right: 8px;
-}
-
-#contact .contact-form .social-media-contact ul li .fa-youtube {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  font-size: 26px;
-  padding-top: 8px;
-  padding-left: 6px;
-  margin-right: 8px;
-}
-
-#contact .contact-form .social-media-contact ul li .fa-google-plus-g {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
-  -ms-flex-align: center;
-      align-items: center;
-  font-size: 26px;
-  padding-top: 8px;
-  padding-left: 5px;
-  margin-right: 8px;
-}
-
-#contact .contact-form form {
-  margin-left: 30px;
-  width: 64%;
-}
-
-#contact .contact-form form .witaj {
-  color: #0eb493;
-  font-family: "Lobster", cursive;
-  margin-bottom: 25px;
-  font-size: 24px;
-}
-
-#contact .contact-form form .form-name {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#contact .contact-form form .form-name input {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  width: 364px;
-  border-width: 3px;
-}
-
-#contact .contact-form form .form-name input:first-child {
-  margin-right: 20px;
-}
-
-#contact .contact-form form .form-textarea {
-  margin-top: 26px;
-}
-
-#contact .contact-form form .form-textarea textarea {
-  width: 748px;
-  height: 137px;
-  margin-bottom: 15px;
-}
-
-#contact .contact-form form .form-submit :first-child {
-  margin-left: 600px;
-  vertical-align: middle;
-}
-
-#contact .contact-form form .form-submit .fa-envelope {
-  color: #0eb493;
-  margin-right: 5px;
-}
-
-#contact .contact-form form .form-submit input {
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
-  font-family: "Miriam";
   margin-bottom: 40px;
-  cursor: pointer;
-}
-
-footer {
-  background-color: #b1b4b3;
-}
-
-footer .footer-elements {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  padding: 105px 0 170px 0;
-}
-
-footer .footer-elements .about-company {
-  max-width: 224px;
-}
-
-footer .footer-elements .about-company h2 {
-  font-size: 28px;
-  font-family: "Lobster", cursive;
-  color: white;
-}
-
-footer .footer-elements .about-company p {
-  font-size: 13px;
-  font-family: "OpenSans";
-  color: white;
-  padding-top: 20px;
-}
-
-footer .footer-elements .search h2 {
-  font-size: 14px;
-  font-family: "Myriad";
-  color: rgba(255, 255, 255, 0.8);
-  padding-bottom: 40px;
-}
-
-footer .footer-elements .search input {
-  background-color: transparent;
-  border: 1px solid white;
-  width: 271px;
-  height: 46px;
-  border-radius: 3px;
-}
-
-footer .footer-elements .create ul {
-  list-style-type: none;
-}
-
-footer .footer-elements .create ul :first-child {
-  padding-bottom: 20px;
-}
-
-footer .footer-elements .create ul li {
-  font-size: 13px;
-  font-family: "OpenSans";
-  color: #062033;
-}
-
-footer .footer-elements .create ul li span {
-  color: white;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
