@@ -37,6 +37,17 @@ $colorTitle: rgb(14, 180, 147);
             align-items: center;
             justify-content: space-between;
 
+            label {
+                margin-right: 20px;
+                font-size: 26px;
+                display: none;
+                width: 26px;
+            }
+
+            #toggle {
+                display: none;
+            }
+
             .logo {
                 font-family: $fontLObster;
                 color: $colorTitle;
@@ -45,7 +56,7 @@ $colorTitle: rgb(14, 180, 147);
                 font-weight: bold;
             }
 
-            .menu {
+            ul {
                 display: flex;
                 align-items: center;
                 list-style-type: none;
@@ -265,6 +276,7 @@ $colorTitle: rgb(14, 180, 147);
         figure {
             padding: 30px 32px 0 32px;
             width: 33.33334%;
+            min-width: 291px;
 
 
 
@@ -382,6 +394,7 @@ figure:hover .image::before {
         figure {
             padding: 30px 32px 0 32px;
             width: 33.33334%;
+            min-width: 291px;
 
 
 
@@ -425,8 +438,9 @@ figure:hover .image::before {
     content: "";
     display: block;
     border-bottom: 1px solid rgb(167, 167, 167);
-    width: 228px;
+    width: 75%;
     margin: 10px 0 15px 0;
+
 
 }
 
@@ -434,7 +448,7 @@ figure:hover .image::before {
     content: "";
     display: block;
     border-bottom: 1px solid rgb(167, 167, 167);
-    width: 228px;
+    width: 75%;
     margin: 3px 0 15px 0;
 
 }
@@ -458,7 +472,6 @@ figure:hover .image::before {
             font-family: $fontRoboto;
             text-align: justify;
             color: rgba(6, 32, 51, 0.8);
-            width: 792px;
             margin-top: 50px;
 
         }
@@ -591,9 +604,19 @@ figure:hover .image::before {
 }
 
 @media(max-width: 1199px) {
+    #jumbotron {
+        header {
+            nav {
+                .logo {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
     #blog {
         .services {
-            padding: 10px;
+            padding: 32px;
         }
 
     }
@@ -601,7 +624,7 @@ figure:hover .image::before {
 
 #work {
     .text {
-        padding: 0 10px;
+        padding: 0 32px;
     }
 
     .myprojects {
@@ -609,7 +632,75 @@ figure:hover .image::before {
     }
 }
 
-@media(max-width: 991px) {}
+#about-me {
+    .about-me {
+        flex-direction: column;
+
+        img {
+            object-fit: contain;
+        }
+
+        p {
+            margin: 0 auto;
+            padding: 15px 32px 0 32px;
+        }
+
+    }
+}
+
+@media(max-width: 991px) {
+    #jumbotron {
+        header {
+            nav {
+                display: block;
+
+                .logo {
+                    display: none;
+                }
+
+                label {
+                    display: inline-block;
+                    cursor: pointer;
+                    color: white;
+                    transition: 0.6s;
+                    float: right;
+                    margin: 10px 50px 10px 0;
+
+
+                }
+
+                ul {
+                    text-align: center;
+                    width: 100%;
+                    display: none;
+
+
+                    li {
+                        background-color: white;
+                        border-bottom: 1px solid $colorTitle;
+
+                        &:first-child {
+                            display: none;
+                        }
+
+                        a {
+                            display: block;
+
+                            &:hover {
+                                color: $colorTitle;
+                            }
+                        }
+                    }
+                }
+
+                #toggle:checked+ul {
+                    display: block;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
 
 @media(max-width: 640px) {}
 

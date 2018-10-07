@@ -34,6 +34,17 @@
       justify-content: space-between;
 }
 
+#jumbotron header nav label {
+  margin-right: 20px;
+  font-size: 26px;
+  display: none;
+  width: 26px;
+}
+
+#jumbotron header nav #toggle {
+  display: none;
+}
+
 #jumbotron header nav .logo {
   font-family: "Lobster", cursive;
   color: #0eb493;
@@ -42,7 +53,7 @@
   font-weight: bold;
 }
 
-#jumbotron header nav .menu {
+#jumbotron header nav ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -51,30 +62,30 @@
   height: 70px;
 }
 
-#jumbotron header nav .menu li {
+#jumbotron header nav ul li {
   padding: 22px 15px;
   border-top: transparent solid 2px;
   transition: 0.3s;
 }
 
-#jumbotron header nav .menu li:hover {
+#jumbotron header nav ul li:hover {
   border-top: #0eb493 solid 2px;
 }
 
-#jumbotron header nav .menu li a {
+#jumbotron header nav ul li a {
   font-family: "Lobster", cursive;
   color: #898c8d;
   font-size: 20px;
   text-decoration: none;
 }
 
-#jumbotron header nav .menu .fas {
+#jumbotron header nav ul .fas {
   font-size: 20px;
   color: #898c8d;
   margin-right: 3px;
 }
 
-#jumbotron header nav .menu .far {
+#jumbotron header nav ul .far {
   font-size: 20px;
   color: #898c8d;
   margin-right: 3px;
@@ -253,6 +264,7 @@
 #work .myprojects figure {
   padding: 30px 32px 0 32px;
   width: 33.33334%;
+  min-width: 291px;
 }
 
 #work .myprojects figure .image {
@@ -358,6 +370,7 @@ figure:hover .image::before {
 #products .myproducts figure {
   padding: 30px 32px 0 32px;
   width: 33.33334%;
+  min-width: 291px;
 }
 
 #products .myproducts figure .image2 {
@@ -393,7 +406,7 @@ figure:hover .image::before {
   content: "";
   display: block;
   border-bottom: 1px solid #a7a7a7;
-  width: 228px;
+  width: 75%;
   margin: 10px 0 15px 0;
 }
 
@@ -401,7 +414,7 @@ figure:hover .image::before {
   content: "";
   display: block;
   border-bottom: 1px solid #a7a7a7;
-  width: 228px;
+  width: 75%;
   margin: 3px 0 15px 0;
 }
 
@@ -426,7 +439,6 @@ figure:hover .image::before {
   font-family: "Roboto";
   text-align: justify;
   color: rgba(6, 32, 51, 0.8);
-  width: 792px;
   margin-top: 50px;
 }
 
@@ -550,12 +562,69 @@ figure:hover .image::before {
 }
 
 @media (max-width: 1199px) {
+  #jumbotron header nav .logo {
+    padding-left: 10px;
+  }
   #blog .services {
-    padding: 10px;
+    padding: 32px;
   }
 }
 
 #work .text {
-  padding: 0 10px;
+  padding: 0 32px;
+}
+
+#about-me .about-me {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+#about-me .about-me img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#about-me .about-me p {
+  margin: 0 auto;
+  padding: 15px 32px 0 32px;
+}
+
+@media (max-width: 991px) {
+  #jumbotron header nav {
+    display: block;
+  }
+  #jumbotron header nav .logo {
+    display: none;
+  }
+  #jumbotron header nav label {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    transition: 0.6s;
+    float: right;
+    margin: 10px 50px 10px 0;
+  }
+  #jumbotron header nav ul {
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  #jumbotron header nav ul li {
+    background-color: white;
+    border-bottom: 1px solid #0eb493;
+  }
+  #jumbotron header nav ul li:first-child {
+    display: none;
+  }
+  #jumbotron header nav ul li a {
+    display: block;
+  }
+  #jumbotron header nav ul li a:hover {
+    color: #0eb493;
+  }
+  #jumbotron header nav #toggle:checked + ul {
+    display: block;
+    position: absolute;
+  }
 }
 /*# sourceMappingURL=style.prefixed.css.map */
