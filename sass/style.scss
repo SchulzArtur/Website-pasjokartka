@@ -6,12 +6,14 @@ $fontLObster: 'Lobster',
 cursive;
 $fontAllura: 'Allura',
 cursive;
+$fontRoboto: 'Roboto';
 $colorTitle: rgb(14, 180, 147);
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: transparent;
 
 }
 
@@ -212,14 +214,14 @@ $colorTitle: rgb(14, 180, 147);
                 padding-bottom: 25px;
                 text-align: left;
                 color: $colorTitle;
-                font-family: "Arial";
+                font-family: $fontRoboto;
 
             }
 
             p {
-                font-size: 13px;
+                font-size: 12px;
                 text-align: justify;
-                font-family: "OpenSans";
+                font-family: $fontRoboto;
 
             }
         }
@@ -259,46 +261,23 @@ $colorTitle: rgb(14, 180, 147);
         display: flex;
         justify-content: space-between;
 
+
         figure {
-            text-align: center;
+            padding: 30px 32px 0 32px;
+            width: 33.33334%;
+
+
 
             .image {
+                line-height: 0;
                 position: relative;
-
-                img {
-                    vertical-align: middle;
-                }
-
-                .hover-eye {
-                    position: absolute;
-                    top: 42%;
-                    left: 40%;
-                    opacity: 0;
-                    z-index: 2;
-
-                    .fas {
-                        border: 1px solid rgb(255, 255, 255);
-                        border-radius: 50%;
-                        padding: 10px;
-                        color: rgb(255, 255, 255);
-                        margin-bottom: 10px;
-
-                    }
-
-                    p {
-                        font-size: 18px;
-                        font-family: "Myriad";
-                        color: rgb(255, 255, 255);
-                    }
-                }
-
+                overflow: hidden;
+                height: 301px;
+                cursor: pointer;
             }
 
             figcaption {
-                width: 302px;
-                margin: 0 auto;
-                text-align: justify;
-                background-color: #e9e9e9;
+                background-color: #f4f4f4;
                 padding: 15px 39px 10px 10px;
 
                 h3 {
@@ -307,14 +286,14 @@ $colorTitle: rgb(14, 180, 147);
                     padding-bottom: 15px;
                     text-align: left;
                     color: $colorTitle;
-                    font-family: "Miriam";
+                    font-family: $fontRoboto;
 
                 }
 
                 p {
-                    font-size: 13px;
+                    font-size: 12px;
                     text-align: justify;
-                    font-family: "OpenSans";
+                    font-family: $fontRoboto;
                     color: rgb(129, 129, 129);
 
                 }
@@ -331,29 +310,60 @@ $colorTitle: rgb(14, 180, 147);
                     }
                 }
             }
-
-            &:hover .hover-eye {
-                opacity: 1;
-                z-index: 100;
-                transition: 0.4s;
-                cursor: pointer;
-            }
         }
     }
 }
 
-figure:hover .image::after {
+
+
+.search-ico {
+    background: url("../images/search-icon.png");
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,
+        -50%);
+    opacity: 0;
+    transition: opacity .5s ease;
+    z-index: 2;
+}
+
+.image>img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image::before {
     content: "";
     background-color: $colorTitle;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    left: 0;
+    width: 200%;
+    height: 120%;
+    transform: -webkit-rotate(2deg);
+    transform: -ms-rotate(2deg);
+    transform: rotate(2deg);
+    left: -20%;
     top: 0;
-    transition: 0.8s ease-in;
+    margin-top: 295px;
+    transition: 0.5s ease-in;
     position: absolute;
     z-index: 1;
 }
+
+
+
+figure:hover .search-ico {
+    transition-delay: .4s;
+    opacity: 1;
+}
+
+figure:hover .image::before {
+    margin-top: -20px;
+    background-color: $colorTitle;
+}
+
 
 #products {
     .title {
@@ -369,39 +379,50 @@ figure:hover .image::after {
         display: flex;
         justify-content: space-between;
 
-        figure {
-            text-align: center;
 
-            img {
-                vertical-align: middle;
+        figure {
+            padding: 30px 32px 0 32px;
+            width: 33.33334%;
+
+
+            .image2 {
+                line-height: 0;
+                position: relative;
+                overflow: hidden;
+                height: 301px;
+                cursor: pointer;
             }
 
             figcaption {
-                width: 302px;
-                margin: 0 auto;
-                background-color: #e9e9e9;
+                background-color: #f4f4f4;
                 padding: 15px 39px 10px 10px;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-bottom: 15px;
+                    text-align: left;
+                    color: $colorTitle;
+                    font-family: $fontRoboto;
+
+                }
+
+                p {
+                    font-size: 12px;
+                    text-align: justify;
+                    font-family: $fontRoboto;
+                    color: rgb(129, 129, 129);
+
+                }
             }
         }
-
-        h3 {
-            font-size: 20px;
-            font-weight: bold;
-            padding-bottom: 15px;
-            text-align: left;
-            color: $colorTitle;
-            font-family: "Miriam";
-
-        }
-
-        p {
-            font-size: 13px;
-            text-align: justify;
-            font-family: "OpenSans";
-            color: rgb(129, 129, 129);
-
-        }
     }
+}
+
+.image2>img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .gray-line-work:after {
@@ -409,7 +430,7 @@ figure:hover .image::after {
     display: block;
     border-bottom: 1px solid rgb(167, 167, 167);
     width: 228px;
-    margin: 15px 0 6px 0;
+    margin: 10px 0 15px 0;
 
 }
 
@@ -418,11 +439,11 @@ figure:hover .image::after {
     display: block;
     border-bottom: 1px solid rgb(167, 167, 167);
     width: 228px;
-    margin: 3px 0 35px 0;
+    margin: 3px 0 15px 0;
 
 }
 
-#services {
+#about-me {
     .title {
         text-align: center;
         font-size: 48px;
@@ -437,8 +458,8 @@ figure:hover .image::after {
         justify-content: space-between;
 
         p {
-            font-size: 24px;
-            font-family: "Miriam";
+            font-size: 20px;
+            font-family: $fontRoboto;
             text-align: justify;
             color: rgba(6, 32, 51, 0.8);
             width: 792px;
@@ -461,8 +482,8 @@ figure:hover .image::after {
     }
 
     p {
-        font-size: 24px;
-        font-family: "Arial";
+        font-size: 20px;
+        font-family: $fontRoboto;
         color: rgba(6, 32, 51, 0.8);
         text-align: center;
         margin: 0 auto;
@@ -519,4 +540,78 @@ figure:hover .image::after {
         }
     }
 
+}
+
+.scrolltop {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+
+    .scroll {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background: #b2b2b2;
+        background: $colorTitle;
+        padding: 15px;
+        text-align: center;
+        margin: 0;
+        cursor: pointer;
+        transition: 0.3s;
+
+
+
+        &:hover {
+            background: white;
+            transition: 0.3s;
+            border: 1px solid $colorTitle;
+
+            .fa {
+                padding-top: -10px;
+                color: $colorTitle;
+            }
+        }
+
+        .fa {
+            font-size: 30px;
+            margin-top: -5px;
+            margin-left: 1px;
+            transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            color: white;
+            font-size: 50px;
+        }
+
+
+        .fa-angle-up {
+            font-size: 50px;
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    #blog {
+        .services {
+            padding: 10px;
+        }
+
+    }
+}
+
+#work {
+    .text {
+        padding: 0 10px;
+    }
+
+    .myprojects {
+        figure {
+            padding: 0;
+
+        }
+    }
 }

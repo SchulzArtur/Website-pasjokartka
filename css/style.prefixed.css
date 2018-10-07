@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: transparent;
 }
 
 .container {
@@ -208,13 +209,13 @@
   padding-bottom: 25px;
   text-align: left;
   color: #0eb493;
-  font-family: "Arial";
+  font-family: "Roboto";
 }
 
 #blog .services figcaption p {
-  font-size: 13px;
+  font-size: 12px;
   text-align: justify;
-  font-family: "OpenSans";
+  font-family: "Roboto";
 }
 
 .gray-line:after {
@@ -250,44 +251,20 @@
 }
 
 #work .myprojects figure {
-  text-align: center;
+  padding: 30px 32px 0 32px;
+  width: 33.33334%;
 }
 
 #work .myprojects figure .image {
+  line-height: 0;
   position: relative;
-}
-
-#work .myprojects figure .image img {
-  vertical-align: middle;
-}
-
-#work .myprojects figure .image .hover-eye {
-  position: absolute;
-  top: 42%;
-  left: 40%;
-  opacity: 0;
-  z-index: 2;
-}
-
-#work .myprojects figure .image .hover-eye .fas {
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: 10px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-#work .myprojects figure .image .hover-eye p {
-  font-size: 18px;
-  font-family: "Myriad";
-  color: white;
+  overflow: hidden;
+  height: 301px;
+  cursor: pointer;
 }
 
 #work .myprojects figure figcaption {
-  width: 302px;
-  margin: 0 auto;
-  text-align: justify;
-  background-color: #e9e9e9;
+  background-color: #f4f4f4;
   padding: 15px 39px 10px 10px;
 }
 
@@ -297,13 +274,13 @@
   padding-bottom: 15px;
   text-align: left;
   color: #0eb493;
-  font-family: "Miriam";
+  font-family: "Roboto";
 }
 
 #work .myprojects figure figcaption p {
-  font-size: 13px;
+  font-size: 12px;
   text-align: justify;
-  font-family: "OpenSans";
+  font-family: "Roboto";
   color: #818181;
 }
 
@@ -317,24 +294,49 @@
   color: #eec319;
 }
 
-#work .myprojects figure:hover .hover-eye {
-  opacity: 1;
-  z-index: 100;
-  transition: 0.4s;
-  cursor: pointer;
+.search-ico {
+  background: url("../images/search-icon.png");
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .5s ease;
+  z-index: 2;
 }
 
-figure:hover .image::after {
+.image > img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image::before {
   content: "";
   background-color: #0eb493;
-  opacity: 0.5;
-  width: 100%;
-  height: 100%;
-  left: 0;
+  width: 200%;
+  height: 120%;
+  transform: -webkit-rotate(2deg);
+  transform: -ms-rotate(2deg);
+  transform: rotate(2deg);
+  left: -20%;
   top: 0;
-  transition: 0.8s ease-in;
+  margin-top: 295px;
+  transition: 0.5s ease-in;
   position: absolute;
   z-index: 1;
+}
+
+figure:hover .search-ico {
+  transition-delay: .4s;
+  opacity: 1;
+}
+
+figure:hover .image::before {
+  margin-top: -20px;
+  background-color: #0eb493;
 }
 
 #products .title {
@@ -354,34 +356,43 @@ figure:hover .image::after {
 }
 
 #products .myproducts figure {
-  text-align: center;
+  padding: 30px 32px 0 32px;
+  width: 33.33334%;
 }
 
-#products .myproducts figure img {
-  vertical-align: middle;
+#products .myproducts figure .image2 {
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+  height: 301px;
+  cursor: pointer;
 }
 
 #products .myproducts figure figcaption {
-  width: 302px;
-  margin: 0 auto;
-  background-color: #e9e9e9;
+  background-color: #f4f4f4;
   padding: 15px 39px 10px 10px;
 }
 
-#products .myproducts h3 {
+#products .myproducts figure figcaption h3 {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 15px;
   text-align: left;
   color: #0eb493;
-  font-family: "Miriam";
+  font-family: "Roboto";
 }
 
-#products .myproducts p {
-  font-size: 13px;
+#products .myproducts figure figcaption p {
+  font-size: 12px;
   text-align: justify;
-  font-family: "OpenSans";
+  font-family: "Roboto";
   color: #818181;
+}
+
+.image2 > img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .gray-line-work:after {
@@ -389,7 +400,7 @@ figure:hover .image::after {
   display: block;
   border-bottom: 1px solid #a7a7a7;
   width: 228px;
-  margin: 15px 0 6px 0;
+  margin: 10px 0 15px 0;
 }
 
 .gray-line-product:after {
@@ -397,10 +408,10 @@ figure:hover .image::after {
   display: block;
   border-bottom: 1px solid #a7a7a7;
   width: 228px;
-  margin: 3px 0 35px 0;
+  margin: 3px 0 15px 0;
 }
 
-#services .title {
+#about-me .title {
   text-align: center;
   font-size: 48px;
   font-weight: 300;
@@ -409,16 +420,16 @@ figure:hover .image::after {
   color: #0eb493;
 }
 
-#services .about-me {
+#about-me .about-me {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
 
-#services .about-me p {
-  font-size: 24px;
-  font-family: "Miriam";
+#about-me .about-me p {
+  font-size: 20px;
+  font-family: "Roboto";
   text-align: justify;
   color: rgba(6, 32, 51, 0.8);
   width: 792px;
@@ -439,8 +450,8 @@ figure:hover .image::after {
 }
 
 #contact p {
-  font-size: 24px;
-  font-family: "Arial";
+  font-size: 20px;
+  font-family: "Roboto";
   color: rgba(6, 32, 51, 0.8);
   text-align: center;
   margin: 0 auto;
@@ -493,5 +504,68 @@ figure:hover .image::after {
   padding: 5px 10px;
   cursor: pointer;
   margin-bottom: 40px;
+}
+
+.scrolltop {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+.scrolltop .scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #b2b2b2;
+  background: #0eb493;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scrolltop .scroll:hover {
+  background: white;
+  transition: 0.3s;
+  border: 1px solid #0eb493;
+}
+
+.scrolltop .scroll:hover .fa {
+  padding-top: -10px;
+  color: #0eb493;
+}
+
+.scrolltop .scroll .fa {
+  font-size: 30px;
+  margin-top: -5px;
+  margin-left: 1px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  color: white;
+  font-size: 50px;
+}
+
+.scrolltop .scroll .fa-angle-up {
+  font-size: 50px;
+}
+
+@media (max-width: 1199px) {
+  #blog .services {
+    padding: 10px;
+  }
+}
+
+#work .text {
+  padding: 0 10px;
+}
+
+#work .myprojects figure {
+  padding: 0;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
