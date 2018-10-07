@@ -379,10 +379,10 @@ figure:hover .image::before {
         display: flex;
         justify-content: space-between;
 
-
         figure {
             padding: 30px 32px 0 32px;
             width: 33.33334%;
+
 
 
             .image2 {
@@ -414,15 +414,11 @@ figure:hover .image::before {
                     color: rgb(129, 129, 129);
 
                 }
+
+
             }
         }
     }
-}
-
-.image2>img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .gray-line-work:after {
@@ -609,9 +605,12 @@ figure:hover .image::before {
     }
 
     .myprojects {
-        figure {
-            padding: 0;
-
-        }
+        figure {}
     }
 }
+
+@media(max-width: 991px) {}
+
+@media(max-width: 640px) {}
+
+@media(max-width: 420px) {}

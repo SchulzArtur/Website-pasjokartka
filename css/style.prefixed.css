@@ -389,12 +389,6 @@ figure:hover .image::before {
   color: #818181;
 }
 
-.image2 > img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .gray-line-work:after {
   content: "";
   display: block;
@@ -563,9 +557,5 @@ figure:hover .image::before {
 
 #work .text {
   padding: 0 10px;
-}
-
-#work .myprojects figure {
-  padding: 0;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
