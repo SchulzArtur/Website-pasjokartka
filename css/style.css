@@ -600,6 +600,63 @@ figure:hover .image::before {
     display: block;
     position: absolute;
   }
+  #jumbotron .hero h1 {
+    font-size: 40px;
+  }
+  #jumbotron .hero h1 span {
+    font-size: 62px;
+  }
+  #blog .title {
+    padding-bottom: 25px;
+  }
+  #blog .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #blog .services figure img {
+    padding-bottom: 29px;
+  }
+  #blog .services figure figcaption p {
+    padding-bottom: 29px;
+  }
+  #work .title {
+    padding-bottom: 25px;
+  }
+  #work .myprojects {
+    flex-direction: column;
+  }
+  #work .myprojects figure {
+    margin: 0 auto;
+  }
+  #products .title {
+    padding-bottom: 25px;
+  }
+  #products .myproducts {
+    flex-direction: column;
+  }
+  #products .myproducts figure {
+    margin: 0 auto;
+  }
+  #about-me .title {
+    padding-bottom: 25px;
+  }
+  #about-me .about-me p {
+    font-size: 16px;
+  }
+  #contact {
+    padding: 0 32px;
+  }
+  #contact .title {
+    padding-bottom: 25px;
+  }
+  #contact p {
+    font-size: 16px;
+  }
+  #contact form .contact-form .form-name {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

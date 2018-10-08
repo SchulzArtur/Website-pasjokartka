@@ -699,6 +699,102 @@ figure:hover .image::before {
                 }
             }
         }
+
+        .hero {
+            h1 {
+                font-size: 40px;
+
+                span {
+                    font-size: 62px;
+                }
+            }
+        }
+    }
+
+    #blog {
+        .title {
+            padding-bottom: 25px;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            figure {
+                img {
+                    padding-bottom: 29px;
+                }
+
+                figcaption {
+                    p {
+                        padding-bottom: 29px;
+                    }
+                }
+            }
+        }
+    }
+
+    #work {
+        .title {
+            padding-bottom: 25px;
+        }
+
+        .myprojects {
+            flex-direction: column;
+
+            figure {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    #products {
+        .title {
+            padding-bottom: 25px;
+        }
+
+        .myproducts {
+            flex-direction: column;
+
+            figure {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    #about-me {
+        .title {
+            padding-bottom: 25px;
+        }
+
+        .about-me {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    #contact {
+        padding: 0 32px;
+
+        .title {
+            padding-bottom: 25px;
+
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        form {
+            .contact-form {
+                .form-name {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
     }
 }
 
