@@ -654,7 +654,7 @@ figure:hover .image::before {
                     color: white;
                     transition: 0.6s;
                     float: right;
-                    margin: 10px 50px 10px 0;
+                    margin: 10px 30px 10px 0;
 
 
                 }
@@ -686,6 +686,7 @@ figure:hover .image::before {
                 #toggle:checked+ul {
                     display: block;
                     position: absolute;
+                    top: 60px;
                 }
             }
         }

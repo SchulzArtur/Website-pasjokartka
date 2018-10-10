@@ -588,7 +588,7 @@ figure:hover .image::before {
     color: white;
     transition: 0.6s;
     float: right;
-    margin: 10px 50px 10px 0;
+    margin: 10px 30px 10px 0;
   }
   #jumbotron header nav ul {
     text-align: center;
@@ -611,6 +611,7 @@ figure:hover .image::before {
   #jumbotron header nav #toggle:checked + ul {
     display: block;
     position: absolute;
+    top: 60px;
   }
   #jumbotron .hero h1 {
     font-size: 40px;
