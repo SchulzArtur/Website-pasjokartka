@@ -255,10 +255,13 @@ $colorTitle: rgb(14, 180, 147);
         justify-content: space-between;
 
 
+
         figure {
             padding: 30px 32px 0 32px;
             width: 33.33334%;
             min-width: 291px;
+
+
 
 
 
@@ -455,7 +458,7 @@ figure:hover .image::before {
             text-align: justify;
             color: rgba(6, 32, 51, 0.8);
             margin-top: 50px;
-            padding: 0 10px;
+            padding: 0 10px 0 20px;
 
         }
     }
@@ -792,11 +795,35 @@ figure:hover .image::before {
                     display: flex;
                     flex-direction: column;
                 }
+
+                .form-textarea {
+                    textarea {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
 }
 
-@media(max-width: 640px) {}
+@media(max-width: 640px) {
+    #contact {
+        p {
+            text-align: justify;
+        }
+
+        form {
+            .contact-form {
+                width: 100%;
+
+                .form-name {
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media(max-width: 420px) {}

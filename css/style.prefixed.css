@@ -423,7 +423,7 @@ figure:hover .image::before {
   text-align: justify;
   color: rgba(6, 32, 51, 0.8);
   margin-top: 50px;
-  padding: 0 10px;
+  padding: 0 10px 0 20px;
 }
 
 #contact {
@@ -682,6 +682,21 @@ figure:hover .image::before {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+  #contact form .contact-form .form-textarea textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  #contact p {
+    text-align: justify;
+  }
+  #contact form .contact-form {
+    width: 100%;
+  }
+  #contact form .contact-form .form-name input {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.prefixed.css.map */
