@@ -20,7 +20,7 @@
 }
 
 #jumbotron header {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #fadbc9;
   width: 100%;
 }
 
@@ -58,7 +58,7 @@
 }
 
 #jumbotron header nav ul li {
-  padding: 22px 15px;
+  padding: 22px 10px;
   border-top: transparent solid 2px;
   transition: 0.3s;
 }
@@ -118,7 +118,6 @@
 
 #jumbotron .social-media {
   text-align: center;
-  margin-top: 12%;
 }
 
 #jumbotron .social-media .fab {
@@ -134,36 +133,21 @@
 }
 
 #jumbotron .social-media .fa-facebook-f {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
+  color: #898c8d;
   align-items: center;
   font-size: 26px;
   padding-top: 8px;
 }
 
 #jumbotron .social-media .fa-instagram {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
+  color: #898c8d;
   align-items: center;
   font-size: 26px;
   padding-top: 8px;
 }
 
 #jumbotron .social-media .fa-youtube {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
-  align-items: center;
-  font-size: 26px;
-  padding-top: 8px;
-}
-
-#jumbotron .social-media .fa-google-plus-g {
-  background-color: black;
-  opacity: 0.302;
-  color: white;
+  color: #898c8d;
   align-items: center;
   font-size: 26px;
   padding-top: 8px;
@@ -218,7 +202,7 @@
   content: "";
   display: block;
   border-bottom: 1px solid #818181;
-  width: 830px;
+  width: 83%;
   margin: 42px auto 0 auto;
 }
 
@@ -331,7 +315,7 @@ figure:hover .search-ico {
 
 figure:hover .image::before {
   margin-top: -20px;
-  background-color: #0eb493;
+  background-color: rgba(14, 180, 147, 0.6);
 }
 
 #products .title {
@@ -354,7 +338,7 @@ figure:hover .image::before {
   min-width: 291px;
 }
 
-#products .myproducts figure .image2 {
+#products .myproducts figure .image {
   line-height: 0;
   position: relative;
   overflow: hidden;
@@ -419,6 +403,7 @@ figure:hover .image::before {
   text-align: justify;
   color: rgba(6, 32, 51, 0.8);
   margin-top: 50px;
+  padding: 0 10px;
 }
 
 #contact {
@@ -544,23 +529,19 @@ figure:hover .image::before {
   #blog .services {
     padding: 32px;
   }
-}
-
-#work .text {
-  padding: 0 32px;
-}
-
-#about-me .about-me {
-  flex-direction: column;
-}
-
-#about-me .about-me img {
-  object-fit: contain;
-}
-
-#about-me .about-me p {
-  margin: 0 auto;
-  padding: 15px 32px 0 32px;
+  #work .text {
+    padding: 0 32px;
+  }
+  #about-me .about-me {
+    flex-direction: column;
+  }
+  #about-me .about-me img {
+    object-fit: contain;
+  }
+  #about-me .about-me p {
+    margin: 0 auto;
+    padding: 15px 32px 0 32px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -569,6 +550,11 @@ figure:hover .image::before {
   }
   #jumbotron header nav .logo {
     display: none;
+  }
+  #jumbotron header nav .social-media {
+    text-align: left;
+    display: flex;
+    padding: 10px;
   }
   #jumbotron header nav label {
     display: inline-block;
@@ -606,6 +592,9 @@ figure:hover .image::before {
   #jumbotron .hero h1 span {
     font-size: 62px;
   }
+  #jumbotron .hero h2 {
+    font-size: 35px;
+  }
   #blog .title {
     padding-bottom: 25px;
   }
@@ -616,6 +605,9 @@ figure:hover .image::before {
   }
   #blog .services figure img {
     padding-bottom: 29px;
+  }
+  #blog .services figure figcaption h3 {
+    text-align: center;
   }
   #blog .services figure figcaption p {
     padding-bottom: 29px;

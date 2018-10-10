@@ -28,7 +28,7 @@ $colorTitle: rgb(14, 180, 147);
     height: 850px;
 
     header {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgb(250, 219, 201);
         width: 100%;
 
         nav {
@@ -63,7 +63,7 @@ $colorTitle: rgb(14, 180, 147);
                 height: 70px;
 
                 li {
-                    padding: 22px 15px;
+                    padding: 22px 10px;
                     border-top: transparent solid 2px;
                     transition: 0.3s;
 
@@ -133,7 +133,6 @@ $colorTitle: rgb(14, 180, 147);
 
     .social-media {
         text-align: center;
-        margin-top: 12%;
 
         .fab {
             width: 42px;
@@ -149,42 +148,25 @@ $colorTitle: rgb(14, 180, 147);
         }
 
         .fa-facebook-f {
-            background-color: rgb(0, 0, 0);
-            opacity: 0.302;
-            color: white;
+            color: rgb(137, 140, 141);
             align-items: center;
             font-size: 26px;
             padding-top: 8px;
         }
 
         .fa-instagram {
-            background-color: rgb(0, 0, 0);
-            opacity: 0.302;
-            color: white;
+            color: rgb(137, 140, 141);
             align-items: center;
             font-size: 26px;
             padding-top: 8px;
         }
 
         .fa-youtube {
-            background-color: rgb(0, 0, 0);
-            opacity: 0.302;
-            color: white;
+            color: rgb(137, 140, 141);
             align-items: center;
             font-size: 26px;
             padding-top: 8px;
         }
-
-        .fa-google-plus-g {
-            background-color: rgb(0, 0, 0);
-            opacity: 0.302;
-            color: white;
-            align-items: center;
-            font-size: 26px;
-            padding-top: 8px;
-
-        }
-
     }
 }
 
@@ -373,7 +355,7 @@ figure:hover .search-ico {
 
 figure:hover .image::before {
     margin-top: -20px;
-    background-color: $colorTitle;
+    background-color: rgba(14, 180, 147, 0.6);
 }
 
 
@@ -398,7 +380,7 @@ figure:hover .image::before {
 
 
 
-            .image2 {
+            .image {
                 line-height: 0;
                 position: relative;
                 overflow: hidden;
@@ -473,6 +455,7 @@ figure:hover .image::before {
             text-align: justify;
             color: rgba(6, 32, 51, 0.8);
             margin-top: 50px;
+            padding: 0 10px;
 
         }
     }
@@ -610,6 +593,8 @@ figure:hover .image::before {
                 .logo {
                     padding-left: 10px;
                 }
+
+
             }
         }
     }
@@ -620,31 +605,30 @@ figure:hover .image::before {
         }
 
     }
-}
 
-#work {
-    .text {
-        padding: 0 32px;
-    }
 
-    .myprojects {
-        figure {}
-    }
-}
-
-#about-me {
-    .about-me {
-        flex-direction: column;
-
-        img {
-            object-fit: contain;
+    #work {
+        .text {
+            padding: 0 32px;
         }
 
-        p {
-            margin: 0 auto;
-            padding: 15px 32px 0 32px;
-        }
 
+    }
+
+    #about-me {
+        .about-me {
+            flex-direction: column;
+
+            img {
+                object-fit: contain;
+            }
+
+            p {
+                margin: 0 auto;
+                padding: 15px 32px 0 32px;
+            }
+
+        }
     }
 }
 
@@ -656,6 +640,12 @@ figure:hover .image::before {
 
                 .logo {
                     display: none;
+                }
+
+                .social-media {
+                    text-align: left;
+                    display: flex;
+                    padding: 10px;
                 }
 
                 label {
@@ -708,6 +698,10 @@ figure:hover .image::before {
                     font-size: 62px;
                 }
             }
+
+            h2 {
+                font-size: 35px;
+            }
         }
     }
 
@@ -727,6 +721,10 @@ figure:hover .image::before {
                 }
 
                 figcaption {
+                    h3 {
+                        text-align: center;
+                    }
+
                     p {
                         padding-bottom: 29px;
                     }
