@@ -1,1 +1,1 @@
-https://schulzartur.github.io/pasjokartka/
+https://schulzartur.github.io/Website-pasjokartka/
